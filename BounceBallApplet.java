@@ -31,10 +31,10 @@ public class BounceBallApplet extends javax.swing.JApplet {
 
   public void init() {
     System.out.println("JApplet init()");
+	
     
+    BallControl myControl = new BallControl();
 
-    DisplayPanel displayPanel = new DisplayPanel();
-    
     // JDK 1.4的用法
     // 取得其Content Pane 
     //Container contentPane = getContentPane();
@@ -46,7 +46,7 @@ public class BounceBallApplet extends javax.swing.JApplet {
     // JDK 5.0之後的用法
     // 直接定義JFrame之Layout BorderLayout
     this.setLayout(new BorderLayout());
-    this.add(displayPanel, BorderLayout.CENTER);
+    this.add(myControl, BorderLayout.CENTER);
   }
 
   public void start() {
@@ -108,17 +108,10 @@ class BounceBallJFrame extends javax.swing.JFrame {
 }
 
 class DisplayPanel extends javax.swing.JPanel {
-  String text;
-  
+ 
   // 建構函式
   public DisplayPanel() {
-    
-  }
-
-  public void paintComponent(Graphics g){
-    super.paintComponent(g);
-    
-			
+   
   }
 }
 
