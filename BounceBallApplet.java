@@ -1,3 +1,15 @@
+/**
+ * Name: Johnny
+ * ID: U10216014
+ * Ex: rewrite textbook p.710~712
+ * Information: 
+ *
+ *      This exercise should rewrite the case study: bouncing ball.
+ *      Originally, the program use applet to present the result.
+ *      This time you should rewrite, and the program not only have main method(running on command)
+ *      ,but also it can run on applet and brower.       
+ */
+
 import java.awt.*;
 import java.applet.*;
 import java.awt.event.*;
@@ -5,9 +17,8 @@ import javax.swing.*;
 import javax.swing.UIManager;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.Timer;
-import java.awt.*;
-import javax.swing.*;
 import java.awt.event.*;
+
 
 public class BounceBallApplet extends javax.swing.JApplet {
 
@@ -20,13 +31,11 @@ public class BounceBallApplet extends javax.swing.JApplet {
 
   public static void main(String args[]){
     BounceBallJFrame frame = new BounceBallJFrame();
-     
   }
   
   // 建構函式
   public BounceBallApplet() {
     System.out.println("JApplet建構函式");
-  
   }
 
   public void init() {
@@ -51,7 +60,6 @@ public class BounceBallApplet extends javax.swing.JApplet {
 
   public void start() {
     System.out.println("JApplet start()");
-   
   }
   
   public void stop() {
