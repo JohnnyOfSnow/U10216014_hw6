@@ -4,17 +4,12 @@ import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.UIManager;
 import javax.swing.plaf.metal.MetalLookAndFeel;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Line2D;
-import java.awt.geom.Point2D;
-import java.awt.Component;
-import java.awt.Graphics;
-import javax.swing.JComponent;
-import javax.swing.JFrame;
+import javax.swing.Timer;
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
 
-public class HelloWorld extends javax.swing.JApplet {
+public class BounceBallApplet extends javax.swing.JApplet {
 
   static {
     try {
@@ -24,12 +19,12 @@ public class HelloWorld extends javax.swing.JApplet {
   }
 
   public static void main(String args[]){
-    HelloWorldJFrame frame = new HelloWorldJFrame();
+    BounceBallJFrame frame = new BounceBallJFrame();
      
   }
   
   // 建構函式
-  public HelloWorld() {
+  public BounceBallApplet() {
     System.out.println("JApplet建構函式");
   
   }
@@ -68,13 +63,14 @@ public class HelloWorld extends javax.swing.JApplet {
   }
 }
 
-class HelloWorldJFrame extends javax.swing.JFrame {
+class BounceBallJFrame extends javax.swing.JFrame {
   // 建構函式
-  public HelloWorldJFrame() {
-    super("Car");
+  public BounceBallJFrame() {
+    super("Bounce Ball JFrame");
 
-    //DisplayPanel displayPanel = new DisplayPanel("Hello World JFrame");
-    CarViewer carViewer = new CarViewer();
+    //DisplayPanel displayPanel = new DisplayPanel();
+    BallControl myControl = new BallControl();
+    
 
     // JDK 1.4的用法
     // 取得其Content Pane 
@@ -87,10 +83,10 @@ class HelloWorldJFrame extends javax.swing.JFrame {
     // JDK 5.0之後的用法
     // 直接定義JFrame之Layout BorderLayout
     this.setLayout(new BorderLayout());
-    this.add(carViewer, BorderLayout.CENTER);
+    this.add(myControl, BorderLayout.CENTER);
 
     this.validate();
-    this.setSize(new Dimension(200, 200));
+    this.setSize(new Dimension(600, 400));
 
     // Center the frame
     Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
