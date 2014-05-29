@@ -4,8 +4,8 @@ U10216014_hw6
 Homework is BounceBallApplet.java
 ---------------------------------
 
-This homework need to add some statement that the program is a application
-and also a applet that can present on the internet.
+This homework need to add some statement that the program 
+can run as a standalone application(So, I add main method).
 
 applet life cycle:
                                              invoke
